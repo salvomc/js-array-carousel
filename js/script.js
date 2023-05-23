@@ -23,6 +23,7 @@ next.addEventListener("click", function ()
     
     {
         items[count].classList.remove("active");
+        count = (count + 1) % images.length;
         items[count].classList.add("active");     
     })
 
@@ -30,5 +31,6 @@ previous.addEventListener("click", function ()
     
     {
         items[count].classList.remove("active");
+        count = (count - 1 + images.length) % images.length;
         items[count].classList.add("active");
     })
